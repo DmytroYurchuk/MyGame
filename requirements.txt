@@ -1,0 +1,6 @@
+django==1.11
+djangorestframework==3.7.7
+django-rest-swagger==2.1.2
+django-redis-cache==1.7.1
+redis==2.10.6
+ujson==1.35
