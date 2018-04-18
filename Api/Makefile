@@ -1,4 +1,4 @@
-.PHONY: run manage
+.PHONY: run manage logs test
 
 manage:
 ifdef CMD
@@ -10,3 +10,9 @@ endif
 
 run:
 	$(MAKE) manage -e CMD=runserver
+
+logs:
+	$(MAKE) manage CMD=log_to_mongo
+
+test:
+	pytest

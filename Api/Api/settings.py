@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+from Api import logging_conf
+
+LOGGING = logging_conf.LOGGING
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_swagger',
-    'game.apps.GameConfig'
+    'game.apps.GameConfig',
+    'workers'
 ]
 
 MIDDLEWARE = [
@@ -120,6 +125,9 @@ PLAYER_VIEW = 32
 
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
+
+MONGO_HOST = '127.0.0.1'
+MONGO_PORT = 27017
 
 MAX_TASKS = 4
 
