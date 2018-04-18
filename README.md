@@ -5,20 +5,20 @@ install redis
 
 install MongoDb
 
-pip install -r requirements.txt --upgrade
+`pip install -r requirements.txt --upgrade`
 
 Check settings.
 
-make run
+`make run`
 
 http://localhost:8000/api/v1/
 
 for logs:
-- setup Redis notification (redis-cli config set notify-keyspace-events KEA)
-- make logs
+- setup Redis notification `redis-cli config set notify-keyspace-events KEA`
+- `make logs`
 
 for tests:
-- make test
+- `make test`
 
 TODO:
 - add docker
